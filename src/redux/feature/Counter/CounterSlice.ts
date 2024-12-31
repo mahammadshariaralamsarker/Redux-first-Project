@@ -5,7 +5,9 @@ const initialState = {
 };
 
 const counterSlice = createSlice({
-  name: "Counter",
+  name: "counter",
   initialState,
   reducers: {},
 });
+
+export default counterSlice.reducer;
