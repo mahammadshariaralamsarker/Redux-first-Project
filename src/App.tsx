@@ -1,14 +1,15 @@
-import { useDispatch, useSelector } from "react-redux";
 import { decreement, increment } from "./redux/feature/Counter/CounterSlice";
+import { RootState } from "./redux/store";
+import { useAppDispatch, useAppSelector } from "./redux/hook";
 
 function App() {
-  const dispatch = useDispatch();
-  const {Count}=useSelector((state)=>state.Counter);
+  const dispatch = useAppDispatch();
+  const { Count } = useAppSelector((state: RootState) => state.Counter);
   const hadleIncrement = () => {
-    dispatch(increment())
+    dispatch(increment());
   };
   const hadleDecrement = () => {
-    dispatch(decreement())
+    dispatch(decreement());
   };
   return (
     <>
