@@ -1,8 +1,9 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { decreement, increment } from "./redux/feature/Counter/CounterSlice";
 
 function App() {
   const dispatch = useDispatch();
+  const {Count}=useSelector((state)=>state.Counter);
   const hadleIncrement = () => {
     dispatch(increment())
   };
@@ -15,7 +16,7 @@ function App() {
       <p>Counter With Redux</p>
       <div>
         <button onClick={hadleIncrement}>Increement</button>
-        <h5>Count:0</h5>
+        <h5>Count:{Count}</h5>
         <button onClick={hadleDecrement}>Decrement</button>
       </div>
     </>
