@@ -8,6 +8,7 @@ function App() {
   const hadleIncrement = (amount:number) => {
     dispatch(increment(amount));
   };
+  
   const hadleDecrement = () => {
     dispatch(decreement());
   };
