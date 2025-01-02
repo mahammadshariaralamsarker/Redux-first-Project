@@ -1,6 +1,7 @@
 import { decreement, increment } from "./redux/feature/Counter/CounterSlice";
 import { RootState } from "./redux/store";
 import { useAppDispatch, useAppSelector } from "./redux/hook";
+import { Button } from "./components/ui/button";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -17,10 +18,10 @@ function App() {
       <h1>This is First Redux Project</h1>
       <p>Counter With Redux</p>
       <div>
-        <button onClick={()=>hadleIncrement(1)}>Increement</button>
-        <button onClick={()=>hadleIncrement(5)}>Increement by 5</button>
+        <Button onClick={()=>hadleIncrement(1)}>Increement</Button>
+        <Button onClick={()=>hadleIncrement(5)}>Increement by 5</Button>
         <h5>Count:{Count}</h5>
-        <button onClick={hadleDecrement}>Decrement</button>
+        <Button onClick={hadleDecrement}>Decrement</Button>
       </div>
     </>
   );
