@@ -4,7 +4,7 @@ import CounterReducer from "./feature/Counter/CounterSlice";
 export const store = configureStore({
   reducer: {
     Counter: CounterReducer,
-  },
+  },g
 });
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch;
