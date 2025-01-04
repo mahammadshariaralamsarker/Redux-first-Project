@@ -17,3 +17,4 @@ const taskSlice = createSlice({
   initialState,
   reducers:{}
 })
+export default taskSlice.reducer
