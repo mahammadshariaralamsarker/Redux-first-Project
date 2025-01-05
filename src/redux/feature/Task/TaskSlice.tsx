@@ -10,8 +10,7 @@ const initialState = {
     priority:"High"
   }
 }
-
-gfh
+ 
 const taskSlice = createSlice({
   name: 'task',
   initialState,
